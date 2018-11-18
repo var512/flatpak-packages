@@ -1,0 +1,15 @@
+{
+  "name": "libplacebo",
+  "buildsystem": "simple",
+  "build-commands": [
+    "meson build --prefix=/app --buildtype release --werror -Dtests=true -Dvulkan=enabled -Dshaderc=enabled -Dglslang=enabled",
+    "ninja -C build",
+    "ninja -C build install"
+  ],
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/haasn/libplacebo.git"
+    }
+  ]
+}

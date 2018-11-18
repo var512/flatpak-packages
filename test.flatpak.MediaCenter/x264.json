@@ -1,0 +1,15 @@
+{
+  "name": "x264",
+  "buildsystem": "simple",
+  "build-commands": [
+    "./configure --prefix=/app --bindir=/app/bin --libdir=/app/lib --enable-shared",
+    "make",
+    "make PREFIX=/app install"
+  ],
+  "sources": [
+    {
+      "type": "git",
+      "url": "http://git.videolan.org/git/x264.git"
+    }
+  ]
+}

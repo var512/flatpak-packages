@@ -1,0 +1,16 @@
+{
+  "name": "uchardet",
+  "buildsystem": "cmake",
+  "builddir": true,
+  "config-opts": [
+    "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+    "-DCMAKE_INSTALL_LIBDIR=/app/lib"
+  ],
+  "sources": [
+    {
+      "type": "git",
+      "branch": "master",
+      "url": "git://anongit.freedesktop.org/uchardet/uchardet"
+    }
+  ]
+}

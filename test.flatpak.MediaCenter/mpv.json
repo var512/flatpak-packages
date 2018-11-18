@@ -1,0 +1,21 @@
+{
+  "name": "mpv",
+  "buildsystem": "simple",
+  "build-commands": [
+    "python3 waf configure --prefix=/app",
+    "python3 waf build",
+    "python3 waf install"
+  ],
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/mpv-player/mpv.git"
+    },
+    {
+      "type": "file",
+      "url": "https://waf.io/waf-2.0.15",
+      "sha256": "34b8156ea375089e1bed5a31acfaff4024f6f3e96f3bee98f801f0c281ad3d2c",
+      "dest-filename": "waf"
+    }
+  ]
+}

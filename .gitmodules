@@ -1,0 +1,3 @@
+[submodule "test.flatpak.MediaCenter/shared-modules"]
+	path = test.flatpak.MediaCenter/shared-modules
+	url = https://github.com/flathub/shared-modules

@@ -1,0 +1,15 @@
+{
+  "name": "mujs",
+  "buildsystem": "simple",
+  "build-commands": [
+    "make",
+    "make prefix=/app install-shared"
+  ],
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/ccxvii/mujs.git",
+      "commit": "7448a82448aa4eff952a4fdb836f197b844e3d1d"
+    }
+  ]
+}

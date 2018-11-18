@@ -1,0 +1,23 @@
+{
+  "name": "libvpx",
+  "buildsystem": "simple",
+  "build-commands": [
+    "./configure --prefix=/app --libdir=/app/lib --enable-shared",
+    "make",
+    "make PREFIX=/app install"
+  ],
+  "config-opts": [
+    "--enable-pic",
+    "--enable-shared",
+    "--disable-examples",
+    "--disable-unit-tests",
+    "--disable-static"
+  ],
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/webmproject/libvpx.git",
+      "commit": "b85ac11737430a7f600ac4efb643d4833afd7428"
+    }
+  ]
+}

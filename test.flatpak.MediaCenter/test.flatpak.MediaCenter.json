@@ -1,0 +1,54 @@
+{
+  "app-id": "test.flatpak.MediaCenter",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "18.08",
+  "sdk": "org.freedesktop.Sdk",
+  "command": "flatpak-exec",
+  "finish-args": [
+    "--share=ipc",
+    "--share=network",
+    "--socket=x11",
+    "--socket=wayland",
+    "--socket=pulseaudio",
+    "--talk-name=org.gnome.SettingsDaemon.MediaKeys",
+    "--filesystem=xdg-desktop",
+    "--filesystem=xdg-download",
+    "--filesystem=xdg-config/mpv",
+    "--filesystem=xdg-config/youtube-dl"
+  ],
+  "build-options": {
+    "env": {
+      "V": "1"
+    }
+  },
+  "modules": [
+    "shared-modules/udev/udev-175.json",
+    "luajit.json",
+    "mujs.json",
+    "fribidi.json",
+    "libass.json",
+    "uchardet.json",
+    "libvpx.json",
+    "x264.json",
+    "x265.json",
+    "libbs2b.json",
+    "shaderc.json",
+    "ffmpeg.json",
+    "libplacebo.json",
+    "youtube-dl.json",
+    "mpv.json",
+    {
+      "name": "flatpak-exec",
+      "buildsystem": "simple",
+      "build-commands": [
+        "install -D flatpak-exec.sh /app/bin/flatpak-exec"
+      ],
+      "sources": [
+        {
+          "type": "file",
+          "path": "flatpak-exec.sh"
+        }
+      ]
+    }
+  ]
+}

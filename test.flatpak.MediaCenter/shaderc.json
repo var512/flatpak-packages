@@ -1,0 +1,40 @@
+{
+  "name": "shaderc",
+  "buildsystem": "simple",
+  "build-commands": [
+    "cmake -GNinja -DCMAKE_BUILD_TYPE=Release -DSHADERC_SKIP_TESTS=ON -DSHADERC_ENABLE_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/app",
+    "ninja",
+    "ninja install"
+  ],
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/google/shaderc.git",
+      "commit": "34c412f21f945f4ef6ed4453f8b5dc4bb9d739e4"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/KhronosGroup/SPIRV-Headers.git",
+      "commit": "c4f8f65792d4bf2657ca751904c511bbcf2ac77b",
+      "dest": "third_party/spirv-headers"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/KhronosGroup/SPIRV-Tools.git",
+      "commit": "ce19e217bc82e1dbd631b6a555b1874432f3a05f",
+      "dest": "third_party/spirv-tools"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/KhronosGroup/SPIRV-Cross.git",
+      "commit": "b4e016374901f6cf95051d1147fc9f20d640f15d",
+      "dest": "third_party/spirv-cross"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/KhronosGroup/glslang.git",
+      "commit": "c11e3156af2297f89a23c8db3f5e2323733ee556",
+      "dest": "third_party/glslang"
+    }
+  ]
+}
